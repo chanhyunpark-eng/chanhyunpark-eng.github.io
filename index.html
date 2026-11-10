@@ -110,11 +110,10 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--rule);padd
     <h1>Chanhyun Park</h1>
     <p class="role">B.S. candidate, Naval Architecture &amp; Ocean Systems Engineering<br>Korea Maritime &amp; Ocean University, Busan</p>
     <ul class="mono">
-      <li><span class="todo">[email]</span></li>
+      <li>chanhyeonpark00@gmail.com</li>
       <li><a href="#" aria-disabled="true">CV (PDF)</a> <span class="todo">[link]</span></li>
-      <li><a href="#" aria-disabled="true">GitHub</a> <span class="todo">[link]</span></li>
-      <li><a href="#" aria-disabled="true">LinkedIn</a> <span class="todo">[optional]</span></li>
-    </ul>
+      <li><a href="https://github.com/chanhyunpark-eng">GitHub</a></li>
+          </ul>
   </div>
   <nav class="mono" aria-label="Sections"><ul>
     <li><a href="#about">About</a></li>
@@ -135,9 +134,9 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--rule);padd
   <h2 id="g-offshore">Offshore &amp; Subsea Systems</h2>
 
   <article id="spar-tidal">
-    <h3>Rim-driven Tidal Current Generator on a SPAR Platform<span class="status done">First Prize</span></h3>
+    <h3>Rim-driven Tidal Current Generator on a SPAR Platform<span class="status done">KSOE President's Award</span></h3>
     <dl class="titleblock mono">
-      <dt>Context</dt><dd>Ocean Engineering CAE Competition, final round Aug 2026 (Team BluePower, 4 members)</dd>
+      <dt>Context</dt><dd>2026 Ocean Engineering CAE Competition (national), Oct 2026; 5th of 10 finalists (Team BluePower, 4 members)</dd>
       <dt>Role</dt><dd>Team leader; performed the hydrodynamic performance and structural analysis</dd>
     </dl>
     <p>A deepwater SPAR producing 60,000 barrels a day needs an estimated 11.6 MW, and its hull is full of risers and production equipment, so a shaft-driven turbine has nowhere to go. We put a shaftless rim generator on the outside of the hull instead: three H-Darrieus blades on a ring that turns around a Tubular Bells–size classic spar (176 m long, D = 26 m), sited in deep water off eastern Trinidad.</p>
@@ -229,12 +228,12 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--rule);padd
   </article>
 
   <article id="rov-internship">
-    <h3>ROV Operations Internship<span class="status live">In progress</span></h3>
+    <h3>ROV R&amp;D Internship<span class="status live">In progress</span></h3>
     <dl class="titleblock mono">
-      <dt>Company</dt><dd><span class="todo">[Company name]</span>, Busan</dd>
-      <dt>Period</dt><dd>2026 – present <span class="todo">[exact dates]</span></dd>
+      <dt>Company</dt><dd>Underwater Solution Co., Ltd., R&amp;D department</dd>
+      <dt>Period</dt><dd>Sep – Dec 2026</dd>
     </dl>
-    <p class="todo">[2–3 lines on what you actually do: e.g. supporting ROV deployment and operation, 3D design and fabrication of parts, processing survey data. Only include what the company allows.]</p>
+    <p>Disassembling, reassembling and piloting ROVs, and taking part in the fabrication and development of new vehicles.</p>
   </article>
 </section>
 
@@ -256,24 +255,24 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--rule);padd
   </article>
 
   <article id="autonomous-boat">
-    <h3>Obstacle-Avoiding Autonomous Boat<span class="status done">1st in class</span></h3>
+    <h3>Obstacle-Stopping Model Boat<span class="status done">1st in class</span></h3>
     <dl class="titleblock mono">
       <dt>Context</dt><dd>ICT Convergence Practicum, KMOU, Sep–Dec 2025</dd>
-      <dt>Role</dt><dd>Team leader; designed the obstacle-avoidance algorithm</dd>
+      <dt>Role</dt><dd>Team leader; wrote the control logic</dd>
     </dl>
-    <p>A small Raspberry Pi boat that detects obstacles and steers around them. It was scored in a model tank on obstacle avoidance, collision avoidance and a time trial. Building it showed me that the boat's slow turning response, not the logic, limited how late it could react.</p>
+    <p>A small model boat that measures the range ahead with an ultrasonic sensor and stops or reverses before an obstacle, controlled from Python through an Arduino. It was scored in a model tank. It also showed the limit of the approach: a boat cannot stop or turn instantly, so reacting to range alone is not enough.</p>
     <figure>
       <div class="fig-scroll">
-      <svg viewBox="0 0 720 150" role="img" aria-label="Control loop: obstacle sensing feeds the avoidance algorithm on a Raspberry Pi, which commands motor and rudder; boat motion changes what the sensors see" font-family="IBM Plex Mono, monospace" font-size="13">
+      <svg viewBox="0 0 720 150" role="img" aria-label="Control loop: ultrasonic range feeds the stop and reverse logic in Python, which drives the motors through an Arduino; boat motion changes what the sensor sees" font-family="IBM Plex Mono, monospace" font-size="13">
         <g fill="var(--panel)" stroke="var(--muted)" stroke-width="1.2">
           <rect x="10" y="40" width="150" height="56"/><rect x="215" y="40" width="200" height="56"/>
           <rect x="470" y="40" width="110" height="56"/><rect x="620" y="40" width="90" height="56"/>
         </g>
         <rect x="215" y="40" width="200" height="56" fill="none" stroke="var(--accent)" stroke-width="2"/>
         <g fill="var(--ink)" text-anchor="middle">
-          <text x="85" y="73">Obstacle sensing</text>
-          <text x="315" y="65">Avoidance algorithm</text><text x="315" y="84" fill="var(--muted)">Raspberry Pi</text>
-          <text x="525" y="73">Motor &amp; rudder</text>
+          <text x="85" y="73">Ultrasonic range</text>
+          <text x="315" y="65">Stop / reverse logic</text><text x="315" y="84" fill="var(--muted)">Python + Arduino</text>
+          <text x="525" y="73">Motors</text>
           <text x="665" y="73">Boat</text>
         </g>
         <g stroke="var(--muted)" stroke-width="1.5" fill="none">
@@ -281,10 +280,10 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--rule);padd
           <path d="M665 96 V128 H85 V104"/>
         </g>
         <g fill="var(--muted)"><path d="M207 63 L215 68 L207 73Z"/><path d="M462 63 L470 68 L462 73Z"/><path d="M612 63 L620 68 L612 73Z"/><path d="M80 104 L85 96 L90 104Z"/></g>
-        <text x="375" y="144" text-anchor="middle" fill="var(--muted)" font-size="12">motion changes what the sensors see</text>
+        <text x="375" y="144" text-anchor="middle" fill="var(--muted)" font-size="12">motion changes what the sensor sees</text>
       </svg>
       </div>
-      <figcaption>Control loop of the course boat. The algorithm (outlined) was my part.</figcaption>
+      <figcaption>Control loop of the course boat. The logic (outlined) was my part.</figcaption>
     </figure>
   </article>
 
@@ -321,9 +320,9 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--rule);padd
 
 
   <article id="vlcc-lines">
-    <h3>319K DWT VLCC Hull Lines<span class="status done">KSNAME President's Award</span></h3>
+    <h3>319K DWT VLCC Hull Lines<span class="status done">SNAK President's Award</span></h3>
     <dl class="titleblock mono">
-      <dt>Context</dt><dd>Student Ship Design Contest, Society of Naval Architects of Korea</dd>
+      <dt>Context</dt><dd>31st National Student Ship Design Contest, Society of Naval Architects of Korea, Nov 2022</dd>
       <dt>Role</dt><dd>Hull lines design</dd>
     </dl>
     <p>Designed the hull lines for a 319,000 DWT crude carrier as part of a team design that won the Society's President's Award.</p>
@@ -335,9 +334,11 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--rule);padd
   <h2 id="h-edu">Education &amp; Other</h2>
   <div class="rows">
     <div class="row"><span class="mono">2021 – 2027</span><div><b>B.S. Naval Architecture &amp; Ocean Systems Engineering</b>, Korea Maritime &amp; Ocean University<br>GPA 3.73 / 4.5; 4.34 / 4.5 over the three semesters since returning from military service. Top of department; merit scholarships for three semesters.</div></div>
-    <div class="row"><span class="mono">Leadership</span><div>Student council president, College of Ocean Science and Technology Convergence</div></div>
+    <div class="row"><span class="mono">Honors</span><div>KMOU Alumni Association President's Award (Nov 2026), one of three students university-wide</div></div>
+    <div class="row"><span class="mono">Leadership</span><div>Student council president, College of Ocean Science and Technology Convergence (Mar 2026 – present)</div></div>
+    <div class="row"><span class="mono">Service</span><div>Republic of Korea Army, drill instructor at the Korea Army Training Center (Jun 2023 – Dec 2024)</div></div>
     <div class="row"><span class="mono">Boston</span><div>Two-month self-directed stay attending engineering seminars, coding meetups and talks by AI companies</div></div>
-    <div class="row"><span class="mono">Tools</span><div class="skills"><span>STAR-CCM+</span><span>QBlade</span><span>Rhino</span><span>HForm</span><span>AutoCAD</span><span>Python</span><span>C++</span><span>Raspberry Pi</span><span>Arduino</span><span>Excel</span></div></div>
+    <div class="row"><span class="mono">Tools</span><div class="skills"><span>STAR-CCM+</span><span>QBlade</span><span>Rhino</span><span>HForm</span><span>AutoCAD</span><span>Python</span><span>Arduino</span><span>Excel</span></div></div>
   </div>
 </section>
 
