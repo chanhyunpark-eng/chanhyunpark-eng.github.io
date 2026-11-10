@@ -1,1 +1,3 @@
-# chanhyunpark-eng.github.io
+# Chanhyun Park
+
+Personal academic website: https://chanhyunpark-eng.github.io
