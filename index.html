@@ -30,7 +30,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 var(--body
 .shell{max-width:1120px;margin:0 auto;padding-block:56px 80px;display:grid;grid-template-columns:250px minmax(0,1fr);gap:56px;align-items:start}
 .side{position:sticky;top:calc(32px + env(safe-area-inset-top,0px));display:grid;gap:18px}
 .wrap{display:grid;gap:64px;min-width:0;max-width:760px}
-.portrait{aspect-ratio:4/5;max-width:100%;border:1.5px dashed var(--rule);background:var(--panel);display:grid;place-items:center;text-align:center;color:var(--muted);padding:12px}
+.portrait{aspect-ratio:4/5;max-width:100%;border:1px solid var(--rule);background:#fff;overflow:hidden}
 .portrait img{width:100%;height:100%;object-fit:cover}
 .side h1{font-size:2rem}
 .side .role{color:var(--muted);font-size:.95rem;line-height:1.5}
@@ -102,23 +102,21 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--rule);padd
 <body>
 <div class="shell">
 <aside class="side">
-  <div class="portrait mono" aria-label="Image placeholder">
+  <div class="portrait">
     <!-- Replace this block's text with: <img src="img/profile.jpg" alt="..."> -->
-    <span class="todo">[image]</span>
+    <img src="img/sidebar.jpg" alt="Perspective view of the rim-driven tidal generator on a SPAR platform">
   </div>
   <div style="display:grid;gap:10px">
     <h1>Chanhyun Park</h1>
     <p class="role">B.S. candidate, Naval Architecture &amp; Ocean Systems Engineering<br>Korea Maritime &amp; Ocean University, Busan</p>
     <ul class="mono">
       <li>chanhyeonpark00@gmail.com</li>
-      <li><a href="#" aria-disabled="true">CV (PDF)</a> <span class="todo">[link]</span></li>
       <li><a href="https://github.com/chanhyunpark-eng">GitHub</a></li>
           </ul>
   </div>
   <nav class="mono" aria-label="Sections"><ul>
     <li><a href="#about">About</a></li>
     <li><a href="#g-offshore">Offshore &amp; Subsea</a></li>
-    <li><a href="#g-autonomy">Marine Autonomy</a></li>
     <li><a href="#g-ship">Hydrodynamics &amp; Ship Design</a></li>
     <li><a href="#g-edu">Education</a></li>
   </ul></nav>
@@ -126,7 +124,7 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--rule);padd
 <main class="wrap">
 <section class="group" id="about" aria-labelledby="h-about">
   <h2 id="h-about">About</h2>
-  <p class="lede">I am a senior in Naval Architecture &amp; Ocean Systems Engineering at Korea Maritime &amp; Ocean University. I design floating structures and the autonomy that has to work within their physics, and I currently intern at an ROV operations company. I am applying to graduate programs in ocean engineering and marine robotics for Fall 2027.</p>
+  <p class="lede">I am a senior in Naval Architecture &amp; Ocean Systems Engineering at Korea Maritime &amp; Ocean University. I work on the design and analysis of floating structures, and I currently intern at an ROV operations company. I am applying to graduate programs in ocean engineering and marine robotics for Fall 2027.</p>
   <div class="interests"><span>Floating offshore structures</span><span>Ship and offshore hydrodynamics</span><span>Ocean energy</span><span>Marine autonomy &amp; collision avoidance</span><span>Subsea robotics</span></div>
 </section>
 
@@ -181,7 +179,7 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--rule);padd
   </article>
 
   <article id="semi-submersible">
-    <h3>Semi-submersible Model: Stability Verification<span class="status done">Completed</span></h3>
+    <h3>Semi-submersible Model: Stability Verification</h3>
     <dl class="titleblock mono">
       <dt>Context</dt><dd>Ocean Structure Design course, KMOU, 2025 (team of 5)</dd>
       <dt>Role</dt><dd>Co-led configuration design and hydrostatics with one teammate; post-submission recalculation</dd>
@@ -237,66 +235,6 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--rule);padd
   </article>
 </section>
 
-<section class="group" aria-labelledby="g-autonomy">
-  <h2 id="g-autonomy">Marine Autonomy</h2>
-
-  <article id="collision-avoidance">
-    <h3>How Much Must an Avoidance Algorithm Know About Its Hull?<span class="status live">In progress</span></h3>
-    <dl class="titleblock mono">
-      <dt>Type</dt><dd>Independent research project, 2026</dd>
-      <dt>Tools</dt><dd>Python (MMG manoeuvring model), HForm</dd>
-    </dl>
-    <p>Autonomous navigation systems are being retrofitted to ships already in service, many of which have no tank-test manoeuvring data. This project asks whether a manoeuvring model estimated from main dimensions alone is enough for COLREGs-compliant collision avoidance, and for which hull forms it fails.</p>
-    <ul class="points">
-      <li>Ships: KVLCC2 and KCS benchmark hulls (validated MMG coefficients), plus a hull I design.</li>
-      <li>Algorithms: velocity obstacle (no ship model) vs. scenario-based MPC with an empirical or exact model.</li>
-      <li>Metrics: closest point of approach, manoeuvre start distance, detour length, time margin for remote intervention.</li>
-    </ul>
-  </article>
-
-  <article id="autonomous-boat">
-    <h3>Obstacle-Stopping Model Boat<span class="status done">1st in class</span></h3>
-    <dl class="titleblock mono">
-      <dt>Context</dt><dd>ICT Convergence Practicum, KMOU, Sep–Dec 2025</dd>
-      <dt>Role</dt><dd>Team leader; wrote the control logic</dd>
-    </dl>
-    <p>A small model boat that measures the range ahead with an ultrasonic sensor and stops or reverses before an obstacle, controlled from Python through an Arduino. It was scored in a model tank. It also showed the limit of the approach: a boat cannot stop or turn instantly, so reacting to range alone is not enough.</p>
-    <figure>
-      <div class="fig-scroll">
-      <svg viewBox="0 0 720 150" role="img" aria-label="Control loop: ultrasonic range feeds the stop and reverse logic in Python, which drives the motors through an Arduino; boat motion changes what the sensor sees" font-family="IBM Plex Mono, monospace" font-size="13">
-        <g fill="var(--panel)" stroke="var(--muted)" stroke-width="1.2">
-          <rect x="10" y="40" width="150" height="56"/><rect x="215" y="40" width="200" height="56"/>
-          <rect x="470" y="40" width="110" height="56"/><rect x="620" y="40" width="90" height="56"/>
-        </g>
-        <rect x="215" y="40" width="200" height="56" fill="none" stroke="var(--accent)" stroke-width="2"/>
-        <g fill="var(--ink)" text-anchor="middle">
-          <text x="85" y="73">Ultrasonic range</text>
-          <text x="315" y="65">Stop / reverse logic</text><text x="315" y="84" fill="var(--muted)">Python + Arduino</text>
-          <text x="525" y="73">Motors</text>
-          <text x="665" y="73">Boat</text>
-        </g>
-        <g stroke="var(--muted)" stroke-width="1.5" fill="none">
-          <path d="M160 68 H207"/><path d="M415 68 H462"/><path d="M580 68 H612"/>
-          <path d="M665 96 V128 H85 V104"/>
-        </g>
-        <g fill="var(--muted)"><path d="M207 63 L215 68 L207 73Z"/><path d="M462 63 L470 68 L462 73Z"/><path d="M612 63 L620 68 L612 73Z"/><path d="M80 104 L85 96 L90 104Z"/></g>
-        <text x="375" y="144" text-anchor="middle" fill="var(--muted)" font-size="12">motion changes what the sensor sees</text>
-      </svg>
-      </div>
-      <figcaption>Control loop of the course boat. The logic (outlined) was my part.</figcaption>
-    </figure>
-  </article>
-
-  <article id="mock-imo">
-    <h3>MASS Code Annex on Remote Intervention<span class="status done">Proposal</span></h3>
-    <dl class="titleblock mono">
-      <dt>Context</dt><dd>2026 Mock IMO Assembly, Ministry of Oceans and Fisheries (Korea)</dd>
-      <dt>Role</dt><dd>Team leader (team of 2)</dd>
-    </dl>
-    <p>Proposed a technical annex to the IMO MASS Code that turns the requirement for a remote operations centre's "genuine ability to intervene" into measurable conditions. It is the regulatory side of the question my collision-avoidance project asks in numbers: how much time an operator needs to act.</p>
-  </article>
-</section>
-
 <section class="group" aria-labelledby="g-ship">
   <h2 id="g-ship">Hydrodynamics &amp; Ship Design</h2>
   <article id="cfd-resistance">
@@ -326,19 +264,18 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--rule);padd
       <dt>Role</dt><dd>Hull lines design</dd>
     </dl>
     <p>Designed the hull lines for a 319,000 DWT crude carrier as part of a team design that won the Society's President's Award.</p>
-    <p class="todo">[Add figure: lines plan from the contest or from the Hull Design &amp; CAD course, labelled with its source]</p>
   </article>
 </section>
 
 <section class="group" id="g-edu" aria-labelledby="h-edu">
   <h2 id="h-edu">Education &amp; Other</h2>
   <div class="rows">
-    <div class="row"><span class="mono">2021 – 2027</span><div><b>B.S. Naval Architecture &amp; Ocean Systems Engineering</b>, Korea Maritime &amp; Ocean University<br>GPA 3.73 / 4.5; 4.34 / 4.5 over the three semesters since returning from military service. Top of department; merit scholarships for three semesters.</div></div>
+    <div class="row"><span class="mono">2021 – 2027</span><div><b>B.S. Naval Architecture &amp; Ocean Systems Engineering</b>, Korea Maritime &amp; Ocean University<br>GPA 3.73 / 4.5; 4.34 / 4.5 over the three semesters since returning from military service. Ranked in the top four of the department in each of the last three semesters, including 1st in Spring 2025; merit-based scholarship each semester.</div></div>
     <div class="row"><span class="mono">Honors</span><div>KMOU Alumni Association President's Award (Nov 2026), one of three students university-wide</div></div>
     <div class="row"><span class="mono">Leadership</span><div>Student council president, College of Ocean Science and Technology Convergence (Mar 2026 – present)</div></div>
     <div class="row"><span class="mono">Service</span><div>Republic of Korea Army, drill instructor at the Korea Army Training Center (Jun 2023 – Dec 2024)</div></div>
-    <div class="row"><span class="mono">Boston</span><div>Two-month self-directed stay attending engineering seminars, coding meetups and talks by AI companies</div></div>
-    <div class="row"><span class="mono">Tools</span><div class="skills"><span>STAR-CCM+</span><span>QBlade</span><span>Rhino</span><span>HForm</span><span>AutoCAD</span><span>Python</span><span>Arduino</span><span>Excel</span></div></div>
+    <div class="row"><span class="mono">Course project</span><div>Arduino model boat that stops and reverses on ultrasonic range to obstacles; 1st in class (ICT Convergence Practicum, 2025)</div></div>
+    <div class="row"><span class="mono">Tools</span><div class="skills"><span>STAR-CCM+</span><span>QBlade</span><span>Rhino</span><span>HForm</span><span>AutoCAD</span><span>Python</span><span>Arduino</span></div></div>
   </div>
 </section>
 
