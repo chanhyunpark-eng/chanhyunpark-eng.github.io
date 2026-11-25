@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Chanhyun Park</title>
-<meta name="description" content="Chanhyun Park: naval architecture and ocean systems engineering, subsea robotics, underwater perception and localization, offshore structures.">
+<meta name="description" content="Chanhyun Park: naval architecture and ocean systems engineering, floating offshore structures, structural reliability, subsea robotics and inspection.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@87,600;87,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -111,12 +111,11 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--rule);padd
     <p class="role">B.S. candidate, Naval Architecture &amp; Ocean Systems Engineering<br>Korea Maritime &amp; Ocean University, Busan</p>
     <ul class="mono">
       <li>chanhyeonpark00@gmail.com</li>
-      <li><a href="cv.pdf">CV (PDF)</a></li>
           </ul>
   </div>
   <nav class="mono" aria-label="Sections"><ul>
     <li><a href="#about">About</a></li>
-    <li><a href="#g-offshore">Subsea &amp; Offshore</a></li>
+    <li><a href="#g-offshore">Offshore &amp; Subsea</a></li>
     <li><a href="#g-ship">Hydrodynamics &amp; Ship Design</a></li>
     <li><a href="#g-edu">Education</a></li>
   </ul></nav>
@@ -124,32 +123,12 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--rule);padd
 <main class="wrap">
 <section class="group" id="about" aria-labelledby="h-about">
   <h2 id="h-about">About</h2>
-  <p class="lede">I am a senior in Naval Architecture &amp; Ocean Systems Engineering at Korea Maritime &amp; Ocean University. My background is in the design and analysis of floating structures. As an intern at an ROV hull inspection company, I saw that the hardest part of an inspection was not the vehicle itself but knowing where the robot is on the hull in turbid port water. That experience is why I am applying to graduate programs in marine robotics and ocean engineering for Fall 2027, to study underwater perception and localization.</p>
-  <div class="interests"><span>Underwater perception &amp; visual localization</span><span>Subsea robotics (ROV)</span><span>Marine vehicle dynamics &amp; control</span><span>Marine autonomy</span><span>Floating offshore structures</span><span>Ship and offshore hydrodynamics</span></div>
+  <p class="lede">I am a senior in Naval Architecture &amp; Ocean Systems Engineering at Korea Maritime &amp; Ocean University. I have worked on the design and analysis of floating offshore structures, ship hydrodynamics, and subsea robotics in the field. This page collects the technical reports from these projects.</p>
+  <div class="interests"><span>Offshore structures</span><span>Subsea engineering</span><span>Marine autonomy &amp; robotics</span></div>
 </section>
 
 <section class="group" aria-labelledby="g-offshore">
-  <h2 id="g-offshore">Subsea Robotics &amp; Offshore Systems</h2>
-
-  <article id="rov-internship">
-    <h3>ROV R&amp;D Internship<span class="status live">In progress</span></h3>
-    <dl class="titleblock mono">
-      <dt>Company</dt><dd>Underwater Solution Co., Ltd., R&amp;D department</dd>
-      <dt>Period</dt><dd>Sep – Dec 2026</dd>
-    </dl>
-    <p>Piloting a Blue Robotics ROV for underwater hull inspections of berthed commercial vessels; maintaining ROVs, 3D-printing components and writing post-inspection technical reports.</p>
-    <p><b>What I observed in the field.</b> The ROV display showed only depth, not the vehicle's <span style="white-space:nowrap">x–y</span> position on the hull, so an inspection depended heavily on the pilot's experience and was slow and costly. Turbid water made the camera view worse, and I saw tether entanglement incidents happen partly because we lost track of where the vehicle was. These problems pointed me to the robot's perception and localization as the question I want to study in graduate school.</p>
-  </article>
-
-
-  <article id="model-boat">
-    <h3>Autonomous Model Boat with Ultrasonic Obstacle Avoidance<span class="status done">1st of 8 teams</span></h3>
-    <dl class="titleblock mono">
-      <dt>Context</dt><dd>ICT Convergence Design course, KMOU, 2025</dd>
-      <dt>Tools</dt><dd>Arduino, ultrasonic range sensor</dd>
-    </dl>
-    <p>An Arduino-controlled model boat that measures the range to obstacles ahead with an ultrasonic sensor and stops and reverses before a collision. It ranked first of 8 teams in the department-wide course.</p>
-  </article>
+  <h2 id="g-offshore">Offshore Systems &amp; Subsea Robotics</h2>
 
   <article id="spar-tidal">
     <h3>Rim-driven Tidal Current Generator on a SPAR Platform<span class="status done">President's Award</span></h3>
@@ -165,7 +144,7 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--rule);padd
     </figure>
     <ul class="points">
       <li><b>Blade section.</b> Ran QBlade double-multiple-streamtube sweeps with multi-Reynolds polars over four NACA sections, solidity 0.10–0.50 and TSR 0–8. Chose NACA 0018 (Cp 0.539): 1.8% below the best section but 50% thicker, which the structure needed.</li>
-      <li><b>Extreme load.</b> At the 100-year current (2.37 m/s) the worst case was TSR 7.25, giving 179 kN/m normal load on the blade. A GFRP shell needs at least 41.6 mm under the DNV-OS-C501 composite safety factor.</li>
+      <li><b>Extreme load.</b> At the 100-year current (2.37 m/s, from a Gumbel fit to ten annual maxima) the worst case was TSR 7.25, giving 179 kN/m normal load on the blade. A GFRP shell needs at least 41.6 mm under the DNV-OS-C501 composite safety factor.</li>
       <li><b>Support arms.</b> Set up a minimum-mass optimization of the S690 tube under stress, neutral-buoyancy, fit-inside-fairing and flow-separation constraints: D = 778.5 mm, t = 58 mm, 444 MPa against 500 MPa allowable.</li>
       <li><b>Neutral buoyancy.</b> Sized the blades (26.2 t) and faired arms to weigh exactly their displacement, so the rotor adds no deadweight to a platform whose payload is its limiting resource.</li>
     </ul>
@@ -243,6 +222,25 @@ footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--rule);padd
       <figcaption>Pitch metacentric height vs. payload. Recalculated from the course report submitted 2025-11-24.</figcaption>
     </figure>
     <div class="more mono"><a href="semisub-report.pdf">Technical report (PDF, 5 pp)</a><span>Recalculation spreadsheet and original course report (Korean) on request</span></div>
+  </article>
+
+  <article id="rov-internship">
+    <h3>ROV R&amp;D Internship<span class="status live">In progress</span></h3>
+    <dl class="titleblock mono">
+      <dt>Company</dt><dd>Underwater Solution Co., Ltd., R&amp;D department</dd>
+      <dt>Period</dt><dd>Sep – Dec 2026</dd>
+    </dl>
+    <p>Piloting a Blue Robotics ROV for underwater hull inspections of berthed commercial vessels; maintaining ROVs, 3D-printing components and writing post-inspection technical reports.</p>
+    <p><b>What I observed in the field.</b> The ROV display showed only depth, not the vehicle's <span style="white-space:nowrap">x–y</span> position on the hull, so an inspection depended heavily on the pilot's experience and was slow and costly. Turbid water made the camera view worse, and I saw tether entanglement incidents happen partly because we lost track of where the vehicle was. These problems showed me how much an inspection, and every judgment built on it, depends on knowing where the robot is.</p>
+  </article>
+
+  <article id="model-boat">
+    <h3>Autonomous Model Boat with Ultrasonic Obstacle Avoidance<span class="status done">1st of 8 teams</span></h3>
+    <dl class="titleblock mono">
+      <dt>Context</dt><dd>ICT Convergence Design course, KMOU, 2025</dd>
+      <dt>Tools</dt><dd>Arduino, ultrasonic range sensor</dd>
+    </dl>
+    <p>An Arduino-controlled model boat that measures the range to obstacles ahead with an ultrasonic sensor and stops and reverses before a collision. It ranked first of 8 teams in the department-wide course.</p>
   </article>
 
 </section>
